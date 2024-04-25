@@ -13,7 +13,7 @@ date
 
 qiime tools import \
   --type "SampleData[PairedEndSequencesWithQuality]" \
-  --input-format PairedEndFastqManifestPhred33V2 \
+  --input-format CasavaOneEightSingleLanePerSampleDirFmt \
   --input-path /fs/ess/PAS2700/users/phoward42/Final-project/data/meta/manifestArranged.tsv \
   --output-path /fs/ess/PAS2700/users/phoward42/Final-project/results/import/demuxed-dss.qza                 # link to the path where I want my demultiplexed data to be exported
 
