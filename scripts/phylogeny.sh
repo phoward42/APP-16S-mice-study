@@ -11,12 +11,12 @@ conda activate qiime2-amplicon-2024.2
 echo "Starting script phylogeny.sh"
 date
 
-qiime phylogeny align-to-tree-mafft-fasttree \
-  --i-sequences results/import/repseqsNoFilt.qza \
-  --o-alignment results/phylogeny/aligned-rep-seqs.qza \
-  --o-masked-alignment results/phylogeny/masked-aligned-rep-seqs.qza \
-  --o-tree results/phylogeny/unrooted-tree.qza \
-  --o-rooted-tree results/phylogeny/rooted-tree.qza
+qiime fragment-insertion sepp \
+    --i-representative-sequences rep-seqs-deblur.qza \
+    --i-reference-database sepp-refs-gg-13-8.qza \
+    --p-threads 4 \
+    --o-tree insertion-tree.qza \
+    --o-placements insertion-placements.qza
 
 # Report
 echo "Done with script phylogeny.sh"
