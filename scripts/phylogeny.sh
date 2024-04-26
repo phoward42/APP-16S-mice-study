@@ -12,11 +12,17 @@ echo "Starting script phylogeny.sh"
 date
 
 qiime fragment-insertion sepp \
-    --i-representative-sequences rep-seqs-deblur.qza \
-    --i-reference-database sepp-refs-gg-13-8.qza \
+    --i-representative-sequences results/denoising/repseqsNoFilt.qza \
+    --i-reference-database data/ref/sepp-refs-gg-13-8.qza \
     --p-threads 4 \
-    --o-tree insertion-tree.qza \
-    --o-placements insertion-placements.qza
+    --o-tree results/phylogeny/insertion-tree.qza \
+    --o-placements results/phylogeny/insertion-placements.qza
+
+qiime fragment-insertion filter-features \
+    --i-table results/denoising/tableNoFilt.qza \
+    --i-tree results/phylogeny/insertion-tree.qza \
+    --o-filtered-table results/phylogeny/filtered-table-deblur.qza \
+    --o-removed-table results/phylogeny/removed-table.qza
 
 # Report
 echo "Done with script phylogeny.sh"
