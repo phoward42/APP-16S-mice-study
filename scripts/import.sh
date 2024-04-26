@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --account=PAS2700
-#SBATCH --time=6:00:00
+#SBATCH --time=1:00:00
 #SBATCH --mail-type=END,FAIL
 set -euo pipefail
 
@@ -13,7 +13,7 @@ date
 
 qiime tools import \
   --type "SampleData[PairedEndSequencesWithQuality]" \
-  --input-format CasavaOneEightSingleLanePerSampleDirFmt \
+  --input-format PairedEndFastqManifestPhred33V2 \
   --input-path /fs/ess/PAS2700/users/phoward42/Final-project/data/meta/manifestArranged.tsv \
   --output-path /fs/ess/PAS2700/users/phoward42/Final-project/results/import/demuxed-dss.qza                 # link to the path where I want my demultiplexed data to be exported
 
