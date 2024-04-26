@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --account=PAS2700
-#SBATCH --time=6:00:00
+#SBATCH --time=3:00:00
 #SBATCH --mail-type=END,FAIL
 set -euo pipefail
 
