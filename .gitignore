@@ -1,3 +1,9 @@
 data/
 slurm*.out
-results/**/*.qza
+
+#Ignore all results files (.qza files)
+results/
+
+#Except those in these two directories
+!results/visualizations/
+!results/core-metrics/
