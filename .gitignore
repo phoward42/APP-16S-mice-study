@@ -1,9 +1,8 @@
 data/
 slurm*.out
 
-#Ignore all results files (.qza files)
-results/
-
-#Except those in these two directories
-!results/visualizations/
-!results/core-metrics/
+#Ignore results with files I don't want pushed
+results/cut-adapt
+results/denoising
+results/phylogeny
+results/import
