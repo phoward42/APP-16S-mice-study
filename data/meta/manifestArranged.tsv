@@ -1,0 +1,5 @@
+sampleID 	 forward-absolute-filepath 	 reverse-absolute-filepath
+101	/fs/ess/PAS2700/users/phoward42/Final-project/data/raw/101_S1_L001_R1_001.fastq.gz	/fs/ess/PAS2700/users/phoward42/Final-project/data/raw/101_S1_L001_R2_001.fastq.gz
+201	/fs/ess/PAS2700/users/phoward42/Final-project/data/raw/201_S11_L001_R1_001.fastq.gz	/fs/ess/PAS2700/users/phoward42/Final-project/data/raw/201_S11_L001_R2_001.fastq.gz
+301	/fs/ess/PAS2700/users/phoward42/Final-project/data/raw/301_S23_L001_R1_001.fastq.gz	/fs/ess/PAS2700/users/phoward42/Final-project/data/raw/301_S23_L001_R2_001.fastq.gz
+401	/fs/ess/PAS2700/users/phoward42/Final-project/data/raw/401_S35_L001_R1_001.fastq.gz	/fs/ess/PAS2700/users/phoward42/Final-project/data/raw/401_S35_L001_R2_001.fastq.gz
