@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --account=PAS2700
-#SBATCH --time=3:00:00
+#SBATCH --time=1:00:00
 #SBATCH --mail-type=END,FAIL
 set -euo pipefail
 
@@ -14,10 +14,8 @@ date
 qiime cutadapt trim-paired \
 --i-demultiplexed-sequences $PWD/results/import/demuxed-dss.qza \
 --p-cores 6 \
---p-front-f GTGYCAGCMGCCGCGGTA  \
---p-adapter-f AATGATACGGCGACCACCGAGATCTACACGCT  \
+--p-front-f GTGYCAGCMGCCGCGGTAA  \
 --p-front-r GGACTACNVGGGTWTCTAAT \
---p-adapter-r CAAGCAGAAGACGGCATACGAGAT \
 --p-match-read-wildcards \
 --p-match-adapter-wildcards \
 --p-discard-untrimmed \
